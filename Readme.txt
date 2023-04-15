@@ -1,6 +1,2 @@
-
-
-In this practical application, your goal is to compare the performance of the classifiers we encountered in this section, 
-namely K Nearest Neighbor, Logistic Regression, Decision Trees, and Support Vector Machines.  
-We will utilize a dataset related to marketing bank products over the telephone.
-
+++bstract
+Dynamic data-driven application system (DDDAS) is a new paradigm in which simulations, measurements, and applications are dynamically integrated, creating new capabilities for a wide range of science and engineering applications. (Dynamic data-driven application system: Recent development and future perspective)
