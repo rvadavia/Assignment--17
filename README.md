@@ -101,7 +101,7 @@ day_of_week and pdays,
 2. Separate features and target variable
 3. Train a random forest classifier
 
-# Display feature importances
+**Display feature importances**
 
            feature  importance
 7         duration    0.350923
