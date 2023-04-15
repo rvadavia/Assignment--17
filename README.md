@@ -103,22 +103,22 @@ we will drop **day_of_week and pdayshem** to increase processing te performance*
 
 **Display feature importances**
 
- Index     feature  importance.
-7         duration    0.350923.
-14       euribor3m    0.129292.
-0              age    0.107838.
-15     nr.employed    0.077533.
-1              job    0.053862.
-8         campaign    0.048115.
-3        education    0.047974.
-10        poutcome    0.037750.
-2          marital    0.025998.
-13   cons.conf.idx    0.025640.
-12  cons.price.idx    0.021233.
-11    emp.var.rate    0.019662.
-6            month    0.017396.
-9         previous    0.016502.
-5          contact    0.010469.
-4          default    0.009813.
-
-.
+ Index     feature  importance.  
+7         duration    0.350923.  
+14       euribor3m    0.129292.  
+0              age    0.107838.  
+15     nr.employed    0.077533.  
+1              job    0.053862.  
+8         campaign    0.048115.  
+3        education    0.047974.  
+10        poutcome    0.037750.  
+2          marital    0.025998.  
+13   cons.conf.idx    0.025640.  
+12  cons.price.idx    0.021233.  
+11    emp.var.rate    0.019662.  
+6            month    0.017396.  
+9         previous    0.016502.  
+5          contact    0.010469.  
+4          default    0.009813.  
+  
+.  
