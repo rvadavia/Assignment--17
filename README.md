@@ -69,3 +69,54 @@ To meet the business objective of improving marketing campaign efficiency and ma
 9. Monitor and maintain the deployed model(s) to ensure continued performance in line with business objectives.
 
 By performing these tasks, you can work towards enhancing the efficiency of marketing campaigns and achieving a similar number of successful customer subscriptions with reduced contact efforts.
+
+### Problem 5: Engineering Features
+
+Now that you understand your business objective, we will build a basic model to get started.  Before we can do this, we must work to encode the data.  Using just the bank information features (columns 1 - 7), prepare the features and target column for modeling with appropriate encoding and transformations.
+
+Perform statistical tests to determine the association between each categorical feature and the target variable. I haved used the Chi-squared test to assess the independence between a categorical feature and the target variable. A low p-value from the Chi-squared test suggests that the categorical feature and the target variable are dependent, which could make the feature useful for your model.
+
+Categorical features: ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'month', 'day_of_week', 'poutcome', 'y']
+job - p-value: 4.189763287563623e-199
+marital - p-value: 2.068014648442211e-26
+education - p-value: 3.3051890144025054e-38
+default - p-value: 5.161957951391637e-89
+housing - p-value: 0.05829447669453452
+loan - p-value: 0.5786752870441754
+contact - p-value: 1.525985652312996e-189
+month - p-value: 0.0
+day_of_week - p-value: 2.958482005278532e-05
+poutcome - p-value: 0.0
+y - p-value: 0.0
+Selected Categorical features: ['housing', 'loan']
+
+**Based on data we will drop features: ['housing', 'loan'] that has no relevnes due to soce grter or equil than 0.05**
+
+Based on the visualization of relationships between each feature and the target variable, the plots reveal that the following columns may not have a significant effect on the machine learning model:
+day_of_week and pdays,
+
+**we will drop tday_of_week and pdayshem to increase processing te performance**
+
+1. Encode categorical features using LabelEncode
+2. Separate features and target variable
+3. Train a random forest classifier
+
+# Display feature importances
+
+           feature  importance
+7         duration    0.350923
+14       euribor3m    0.129292
+0              age    0.107838
+15     nr.employed    0.077533
+1              job    0.053862
+8         campaign    0.048115
+3        education    0.047974
+10        poutcome    0.037750
+2          marital    0.025998
+13   cons.conf.idx    0.025640
+12  cons.price.idx    0.021233
+11    emp.var.rate    0.019662
+6            month    0.017396
+9         previous    0.016502
+5          contact    0.010469
+4          default    0.009813
