@@ -95,7 +95,7 @@ Selected Categorical features: ['housing', 'loan']
 Based on the visualization of relationships between each feature and the target variable, the plots reveal that the following columns may not have a significant effect on the machine learning model:
 day_of_week and pdays,
 
-**we will drop tday_of_week and pdayshem to increase processing te performance**
+we will drop **day_of_week and pdayshem** to increase processing te performance**
 
 1. Encode categorical features using LabelEncode
 2. Separate features and target variable
