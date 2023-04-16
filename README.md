@@ -121,4 +121,55 @@ we will drop **day_of_week and pdayshem** to increase processing te performance*
 5          contact    0.010469.  
 4          default    0.009813.  
   
-.  
+### Problem 6: Train/Test Split
+
+With our data prepared, split it into a train and test set
+
+**Separate features and target variable**
+X = data_encoded.drop('y', axis=1)
+y = data_encoded['y']
+
+**Split the dataset into training and testing sets**
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+**Standardize or normalize the features**
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+### Problem 7: A Baseline Model
+
+Before we build our first model, we want to establish a baseline.  What is the baseline performance that our classifier should aim to beat?
+
+Based on our test data 
+Baseline Accuracy (Majority Class Classifier  where customer will not excpet the offer is): 0.8876
+Baseline Accuracy (Minority Class Classifier  where customer will  excpet the offer is): 0.1124
+
+### Problem 8: A Simple Model
+
+Use Logistic Regression to build a basic model on your data.  
+
+logistic_regression = LogisticRegression()
+logistic_regression.fit(X_train, y_train)
+y_pred = logistic_regression.predict(X_test)
+[[10690   278] [  832   557]]  
+
+### Problem 9: Score the Model
+
+What is the accuracy of our logistic_regression model?
+
+The accuracy of a model is a performance metric that measures the proportion of correct predictions made by the model out of the total number of predictions. In other words, it is the ratio of the number of correct predictions to the total number of predictions made. Accuracy is commonly used to evaluate the performance of classification models.
+
+Accuracy: 0.9102
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.93      0.97      0.95     10968
+           1       0.67      0.40      0.50      1389
+
+    accuracy                           0.91     12357
+   macro avg       0.80      0.69      0.73     12357
+weighted avg       0.90      0.91      0.90     12357
+
+Confusion Matrix:
+[[10690   278] [  832   557]]
