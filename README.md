@@ -173,3 +173,45 @@ weighted avg       0.90      0.91      0.90     12357
 
 Confusion Matrix:
 [[10690   278] [  832   557]]
+
+
+### Problem 10: Model Comparisons
+
+Now, we aim to compare the performance of the Logistic Regression model to our KNN algorithm, Decision Tree, and SVM models.  Using the default settings for each of the models, fit and score each.  Also, be sure to compare the fit time of each of the models.  Present your findings in a `DataFrame` similar to that below:
+-------------------------------------------------------------------------------------------
+                 Model | Train Time |  Accuracy |  Train Accuracy |  Test Accuracy|
+                   SVM |    6.360792|  0.911791 |        0.918248 |     0.911791  |
+   Logistic Regression |    0.039036|  0.910172 |       0.909091  |     0.910172  |
+                   KNN |    0.002002|  0.900461 |       0.930041  |     0.900461  |
+         Decision Tree |    0.107098|  0.888161 |       1.000000  |     0.888161  |
+         ------------------------------------------------------------------------------
+
+### Problem 11: Improving the Model
+
+Now that we have some basic models on the board, we want to try to improve these.  Below, we list a few things to explore in this pursuit.
+
+- More feature engineering and exploration.  For example, should we keep the gender feature?  Why or why not?
+- Hyperparameter tuning and grid search.  All of our models have additional hyperparameters to tune and explore.  For example the number of neighbors in KNN or the maximum depth of a Decision Tree.  
+- Adjust your performance metric
+
+I Pweromed GridSearchCV and RandomizedSearchCV to hyperparameters to tune and explore amd look bets prametrs
+
+        Model                 Train_Time  Best Parameters                                      Best Score
+0      LogisticRegression()   12.304204   {'solver': 'liblinear', 'penalty': 'l2', 'C': ...    0.909264
+1    KNeighborsClassifier()   33.202210   {'weights': 'distance', 'n_neighbors': 28, 'me...    0.906802
+2  DecisionTreeClassifier()    1.506371   {'min_samples_split': 15, 'min_samples_leaf': ...    0.913774
+3                     SVC()  684.002242   {'kernel': 'rbf', 'gamma': 'scale', 'C': 10}    0.909334
+
+                                       
+From these resuts DecisionTreeClassifier() scoer was higest 0.913774 na d excution time of 1.506371
+Comprare to result of KNeighborsClassifier()  where it took 33 and lowast  scoer of 0.906802
+the winnr fo this teste is  Best Score() with 1.5 min and Best Score  0.913774
+
+##### Questions
+
+Is the procedd forn a bets ML Model? what is the reulsts
+
+**DecisionTreeClassifier() coer was higest 0.913774 na d excution time of 1.506371. in most cases this model eould prerformvell.**
+
+
+
