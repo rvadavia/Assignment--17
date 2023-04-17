@@ -211,7 +211,7 @@ the winnr fo this teste is  Best Score() with 1.5 min and Best Score  0.913774
 
 Is the procedd forn a bets ML Model? what is the reulsts
 
-**DecisionTreeClassifier() coer was higest 0.913774 na d excution time of 1.506371. in most cases this model eould prerformvell.**
+**DecisionTreeClassifier() score was highest 0.913774 and execution time of 1.506371. in most cases, this model would perform well.**
 
 
 
